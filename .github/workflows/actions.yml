@@ -21,7 +21,7 @@ jobs:
       - uses: bluwy/substitute-string-action@v1
         id: sub
         with:
-          _input-file: './template.html'
+          _input-file: './templates/index.html'
           _output-file: './index.html'
           World: GitHub
       - name: Commit files
