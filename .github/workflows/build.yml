@@ -22,7 +22,7 @@ jobs:
         with:
           _input-text: 'Hello World!'
           World: GitHub    
-      - run: echo ${{ steps.sub.outputs.result }} # Prints 'Hello GitHub!'
+      - run: ls
       - uses: bluwy/substitute-string-action@v1
         id: sub2
         with:
