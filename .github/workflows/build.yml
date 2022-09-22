@@ -20,6 +20,12 @@ jobs:
       - uses: bluwy/substitute-string-action@v1
         id: sub
         with:
+          _input-text: 'Hello World!'
+          World: GitHub    
+      - run: echo ${{ steps.sub.outputs.result }} # Prints 'Hello GitHub!'
+      - uses: bluwy/substitute-string-action@v1
+        id: sub2
+        with:
           _input-file: './.github/workflows/template.html'
           _output-file: './index.html'
           World: GitHub
