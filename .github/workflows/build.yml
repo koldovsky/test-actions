@@ -17,15 +17,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2.3.4
       - uses: bluwy/substitute-string-action@v1
         id: sub
         with:
-          _input-text: 'Hello World!'
-          World: GitHub    
-      - run: ls
-      - uses: bluwy/substitute-string-action@v1
-        id: sub2
-        with:
-          _input-file: './.github/workflows/template.html'
+          _input-file: './template.html'
           _output-file: './index.html'
           World: GitHub
